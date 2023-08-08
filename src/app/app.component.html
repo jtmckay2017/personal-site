@@ -23,8 +23,15 @@
         <button ngbNavLink>Portfolio</button>
         <ng-template ngbNavContent>
           
-          <div id="Portfolio" class="mt-4">
-            Portfolio
+          <div id="Portfolio" class="mt-4 row">
+            <div class="card col-2 me-4 px-0" style="width: 18rem;" *ngFor="let project of projects">
+              <img [src]="project.imgUrl" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{project.title}}</h5>
+                <p class="card-text">{{project.description}}</p>
+                <a href="https://averagebrownie.itch.io/farmers-market" class="btn btn-primary">Play Game</a>
+              </div>
+            </div>
           </div>
 
         </ng-template>
