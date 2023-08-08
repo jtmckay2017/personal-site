@@ -1,0 +1,37 @@
+<router-outlet></router-outlet>
+
+<div class="container">
+  <div id="header" class="mb-2 mt-4">
+    <h4>Joel McKay | Software Engineer</h4>
+    
+    <hr class="my-3">
+  </div>
+
+  <div id="menu">
+    <ul ngbNav #nav="ngbNav" class="nav-pills">
+      <li ngbNavItem class="nav-item me-4">
+        <button ngbNavLink>Home</button>
+        <ng-template ngbNavContent>
+
+          <div id="home" class="mt-4">
+            Home
+          </div>
+
+        </ng-template>
+      </li>
+      <li ngbNavItem class="nav-item">
+        <button ngbNavLink>Portfolio</button>
+        <ng-template ngbNavContent>
+          
+          <div id="Portfolio" class="mt-4">
+            Portfolio
+          </div>
+
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+  <div id="content">
+    <div [ngbNavOutlet]="nav"></div>
+  </div>
+</div>
